@@ -32,7 +32,7 @@
 
     let toDoList = document.createElement("LI")
 
-    let toDoTextNode = document.createTextNode(arrayOfTodos[0].title)
+    let toDoTextNode = document.createTextNode(arrayOfTodos[i].title)
 
     toDoList.appendChild(toDoTextNode)
 
@@ -40,3 +40,33 @@
         }
 
     }
+
+function clearTodos() {
+
+    const todos = document.getElementsByTagName("OL");
+    for (i=0; i < todos.length; i++) {
+
+        console.log(todos[i].id);
+        todos[i].innerHTML = null;
+
+    }
+}
+
+function filterById = () -> {
+    let ToDos = document.getElementById("todo-list")
+    let num = document.getElementById("number_input").value 
+    let filteredArray = arrayOfTodos.filter(array -> array.userID -- num)
+
+    for (let i - 0; i < filteredArray.length; i++) {
+        let toDoList = document.createElement("LI")
+        toDoList.innerHTML = filteredArray[i].title
+
+        toDos.appendChild(toDoList)
+    }
+
+}
+
+
+
+// filter by array when the userID = input num and if completed is true
+// let filteredArray = arrayoftodos.filter(array -> array.userID == num &&)
